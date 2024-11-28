@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Vale Imobiliária</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+        }
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+        .logo img {
+            width: 150px; 
+        }
+        .header-text {
+            flex: 1.3;
+            text-align: left;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #444;
+            padding: 10px 20px;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        .imoveis {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 90px;
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .imovel {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .imovel:hover {
+            transform: scale(1.05);
+        }
+        .imovel img {
+            width: 100%;
+            height: 250px; 
+            object-fit: cover; 
+        }
+        .imovel .descricao {
+            padding: 15px;
+        }
+        .imovel h3 {
+            margin: 0;
+            color: #333;
+        }
+        .imovel p {
+            color: #666;
+        }
+        .comprar-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .comprar-btn:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo coin imobiliaria.PNG" alt="Logo da Vale Imobiliária">
+        </div>
+        <div class="header-text">
+            <h1>Vale Imobiliária</h1>
+            <p>Seu sonho de casa começa aqui!</p>
+        </div>
+        <div class="spacer"></div>
+    </header>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobrenos.html">Sobre Nós</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    
+    <section id="imoveis">
+        <h2>Imóveis Disponíveis</h2>
+        <div class="imoveis">
+          
+            <div class="imovel">
+                <img src="imagens/quarto ap.jpg" alt="Imóvel 1">
+                <div class="descricao">
+                    <h3>Apartamento no Novo-Centro</h3>
+                    <p>3 quartos, 2 banheiros, sala ampla, 120m²</p>
+                    <p>R$ 500.000</p>
+                <button class="comprar-btn" onclick="window.location.href='comprar.html?nome=Apartamento%20no%20Novo-Centro&descricao=3%20quartos,%202%20banheiros,%20sala%20ampla,%20120m²&preco=500.000'"><i class="bi bi-cart4"></i> Comprar</button>
+                </div>
+            </div>
+          
+            <div class="imovel">
+                <img src="imagens/casa 250m2.jfif" alt="Imóvel 2">
+                <div class="descricao">
+                    <h3>Casa no Bairro Horto</h3>
+                    <p>4 quartos, piscina, jardim, 250m²</p>
+                    <p>R$ 800.000</p>
+                    <button class="comprar-btn" onclick="window.location.href='comprar.html?nome=Casa%20no%20Bairro%20Horto&descricao=4%20quartos,%20piscina,%20jardim,%20250m²&preco=800.000'"><i class="bi bi-cart4"></i> Comprar</button>
+
+                </div>
+            </div>
+       
+            <div class="imovel">
+                <img src="imagens/chacara500m2.jfif" alt="Imóvel 3">
+                <div class="descricao">
+                    <h3>Chácara em área rural, Naquinho-MG</h3>
+                    <p>5 quartos, área para eventos, 500m²</p>
+                    <p>R$ 1.200.000</p>
+                    <button class="comprar-btn" onclick="window.location.href='comprar.html?nome=Chácara%20em%20área%20rural,%20Naquinhos-MG&descricao=5%20quartos,%20área%20para%20eventos,%20500m²&preco=1.200.000'"><i class="bi bi-cart4"></i> Comprar</button>
+
+                </div>
+            </div>
+          
+            <div class="imovel">
+                <img src="imagens/casa 5.PNG" alt="Imóvel 4">
+                <div class="descricao">
+                    <h3>Casa no Bairro Caravelas</h3>
+                    <p>3 quartos, 2 banheiros, 150m²</p>
+                    <p>R$ 400.000.</p>
+                    <button class="comprar-btn" onclick="window.location.href='comprar.html?nome=Casa%20no%20Bairro%20Caravelas&descricao=3%20quartos,%202%20banheiros,%20150m²&preco=400.000'"><i class="bi bi-cart4"></i> Comprar</button>
+
+                </div>
+            </div>
+           
+            <div class="imovel">
+                <img src="imagens/casa 6.PNG" alt="Imóvel 5">
+                <div class="descricao">
+                    <h3>Apartamento no Bairro Canaã</h3>
+                    <p>3 quartos, 2 banheiros, 150m²</p>
+                    <p>R$ 450.000</p>
+                    <button class="comprar-btn" onclick="window.location.href='comprar.html?nome=Apartamento%20no%20Bairro%20Canaã&descricao=3%20quartos,%202%20banheiros,%20150m²&preco=450.000'"><i class="bi bi-cart4"></i> Comprar</button>
+
+                </div>
+            </div>
+       
+            <div class="imovel">
+                <img src="imagens/ap1.PNG" alt="Imóvel 6">
+                <div class="descricao">
+                    <h3>Casa no Bairro Ideal</h>
+                    <p>2 quartos, 1 banheiro, 100m²</p>
+                    <p>R$ 300.000</p>
+                    <button class="comprar-btn" onclick="window.location.href='comprar.html?nome=Casa%20no%20Bairro%20Ideal&descricao=2%20quartos,%201%20banheiros,%20100m²&preco=300.000'"><i class="bi bi-cart4"></i> Comprar</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vale Imobiliária - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
